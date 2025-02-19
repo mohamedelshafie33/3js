@@ -4,9 +4,10 @@ let quantities = ["10 phones", "20 phones", "30 phones"];
 
 let showdata=()=>{
     phones.forEach((phone, index)=>{
-        console.log(`Phone: ${phone} Price: ${prices[index]} Quantity: ${quantities[index]}`);
+        console.log(`Phone: ${phone}/ Price: ${prices[index]}/ Quantity: ${quantities[index]}`);
     })
 }
+showdata();
 
 
 let adding=()=>{
@@ -31,4 +32,15 @@ let deleteing=()=>{
     
     showdata();
 }
-showdata();
+let uptade=()=>{
+    let phone = +prompt("Enter phone number to delete")-1;
+    let price =phone;
+    let quantitie =phone;
+    
+
+    phones.splice(phone,1,prompt("Enter phone name"));
+    prices.splice(price,1,prompt("Enter phone price"));
+    quantities.splice(quantitie,1,prompt("Enter phone quantity"));
+    
+    showdata();
+}
